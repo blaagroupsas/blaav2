@@ -59,12 +59,15 @@
   height: auto;
   margin: auto;
   overflow: hidden;
+  @media (max-width: 768px) {
+    width: auto;
+  }
 }
 
 .slider .slide-track {
   display: flex;
   animation: scroll 40s linear infinite;
-  -webkit-animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 25s linear infinite;
   width: calc(200px * 14);
 }
 

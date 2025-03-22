@@ -5,24 +5,7 @@
             <img src="assets/images/logob.webp" class="img-fluid" width="150" alt="">
         </a>
 
-        <!-- Botón de "Enviar mensaje" fuera del menú -->
-        <a class="btn btn-outline-light d-none d-lg-block" (click)="openForm()">Enviar mensaje</a>
-
-        <!-- Botón hamburguesa en móviles -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menú -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
-            </ul>
-        </div>
-
-        <!-- Botón visible en móviles -->
-        <a class="btn btn-outline-light d-lg-none ms-2" (click)="openForm()">Enviar mensaje</a>
+        <!-- Botón de "Enviar mensaje" -->
+        <a class="btn btn-outline-light" (click)="openForm()">Enviar mensaje</a>
     </div>
 </nav>
