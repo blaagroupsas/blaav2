@@ -1,0 +1,90 @@
+.services {
+  padding: 80px 0;
+  color: #fff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff6900, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .service-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .service-text {
+    flex: 1;
+    max-width: 50%;
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+
+        span {
+          color: #ff6900;
+          font-size: 1.5rem;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .learn-more {
+      background: transparent;
+      border: 2px solid #fff;
+      padding: 12px 24px;
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+
+      &:hover {
+        background: #ff6900;
+        border-color: #ff6900;
+      }
+    }
+  }
+
+  .service-content img {
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra difuminada */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .service-content img:hover {
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra en hover */
+  }
+}

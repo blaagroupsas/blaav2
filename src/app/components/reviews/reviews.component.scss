@@ -1,0 +1,89 @@
+/** Estilos para la sección de Reviews adaptados al nuevo fondo **/
+.reviews {
+  position: relative;
+  padding: 4rem 0;
+  text-align: center;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ff6900, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 320px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(255, 105, 0, 0.5);
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.review-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.review-author {
+  font-weight: bold;
+  color: #ff6900;
+}
+
+.review-role {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.slider {
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider .slide-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: calc(200px * 14);
+}
+
+.slider .slide {
+  width: 200px;
+}
+
+.slider .slide img {
+  width: 100%;
+  border-radius: 15%;
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-200px * 7));
+    transform: translateX(calc(-200px * 7));
+  }
+}

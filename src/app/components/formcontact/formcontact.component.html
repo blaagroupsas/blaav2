@@ -1,0 +1,51 @@
+<div class="overlay" *ngIf="isFormOpen">
+    <div class="form-container">
+        <span class="close-btn" (click)="closeForm()">&times;</span>
+
+        <!-- Ícono de FontAwesome -->
+        <i class="fa-solid fa-envelope form-icon"></i>
+
+        <h2>Contáctanos</h2>
+        <p>Por favor, completa el formulario para contactarnos.</p>
+
+        <!-- Formulario Angular -->
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form needs-validation" novalidate>
+            <div class="mb-3 text-start">
+                <input id="name" type="text" class="form-control custom-input"
+                    [ngClass]="{ 'is-invalid': contactForm.get('name')?.invalid && contactForm.get('name')?.touched }"
+                    formControlName="name" placeholder="Ingrese su nombre">
+                <div class="invalid-feedback">El nombre es obligatorio.</div>
+            </div>
+
+            <div class="mb-3 text-start">
+                <input id="email" type="email" class="form-control custom-input"
+                    [ngClass]="{ 'is-invalid': contactForm.get('email')?.invalid && contactForm.get('email')?.touched }"
+                    formControlName="email" placeholder="Ingrese su correo">
+                <div class="invalid-feedback">
+                    {{ contactForm.get('email')?.errors?.['required'] ? 'El email es obligatorio' : 'Ingrese un email
+                    válido' }}
+                </div>
+            </div>
+
+            <div class="mb-3 text-start">
+                <textarea id="message" class="form-control custom-input" rows="4"
+                    [ngClass]="{ 'is-invalid': contactForm.get('message')?.invalid && contactForm.get('message')?.touched }"
+                    formControlName="message" placeholder="Escriba su mensaje"></textarea>
+                <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
+            </div>
+
+            <button type="submit" class="btn custom-btn w-100">
+                <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm"></span>
+                {{ isSubmitting ? 'Enviando...' : 'Enviar' }}
+            </button>
+
+            <div *ngIf="messageStatus === 'success'" class="alert alert-success mt-3">
+                ✅ Mensaje enviado correctamente.
+            </div>
+
+            <div *ngIf="messageStatus === 'error'" class="alert alert-danger mt-3">
+                ❌ Ocurrió un error, inténtalo de nuevo.
+            </div>
+        </form>
+    </div>
+</div>

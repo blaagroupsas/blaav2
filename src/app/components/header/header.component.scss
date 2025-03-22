@@ -1,0 +1,71 @@
+.navbar {
+  background: rgba(0, 0, 0, 0.8); // Fondo oscuro con transparencia
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+
+  display: flex;
+  align-items: center; // Asegura alineación vertical
+  justify-content: space-between; // Espaciado adecuado
+
+  .navbar-brand img {
+    max-height: 50px; // Mantiene un tamaño consistente
+  }
+
+  .btn {
+    white-space: nowrap; // Evita que el texto se corte
+    padding: 0.5rem 1.2rem;
+  }
+
+  .navbar-toggler {
+    order: 2; // Asegura que el botón de hamburguesa se mantenga a la derecha
+  }
+  .nav-link {
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  .btn-outline-light {
+    border-color: #ff6900;
+    color: #ff6900;
+
+    &:hover {
+      background-color: #ff6900;
+      color: #ffffff;
+    }
+  }
+  @media (max-width: 991px) {
+    // Dispositivos móviles
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-toggler {
+      order: 1;
+    }
+
+    .btn {
+      order: 2;
+      margin-left: auto; // Asegura que el botón quede alineado a la derecha
+    }
+  }
+
+  @media (max-width: 414px) {
+    // Ajuste para móviles pequeños
+    .container {
+      flex-wrap: nowrap; // Evita que los elementos se muevan a una nueva línea
+      padding: 0 10px; // Reduce el padding lateral
+    }
+
+    .navbar-brand img {
+      max-width: 120px; // Reduce el logo si es necesario
+    }
+
+    .btn {
+      font-size: 14px; // Reduce el tamaño del botón para que quepa bien
+      padding: 0.4rem 1rem;
+    }
+  }
+}

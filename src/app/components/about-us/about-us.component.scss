@@ -1,0 +1,52 @@
+.about-us {
+  padding: 5rem 0;
+  text-align: center;
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff6900, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-text {
+    font-size: 1.3rem;
+    color: #fe8000;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
+  }
+}
+.benefit-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  i {
+    font-size: 2rem; // Tamaño del icono
+    color: #ff6900; // Color del icono
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem; // Tamaño del texto
+    color: #fff; // Color del texto
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+}
